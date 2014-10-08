@@ -1,0 +1,14 @@
+k-template="'${ data.DepreciationPercentage }%'"
+
+
+$scope.DepreciationPercentages.options.data[0].DepreciationPercentage
+
+
+   $scope.DisableIfDeprMethodIsNo = function () {
+        if ($scope.DepreciationPercentages.options.data[0].DepreciationPercentage == "N/A")return true;
+        if ($scope.books.SelectedDeprMethod != undefined && $scope.dpdDeprMethod != undefined && $scope.dpdDeprMethod.dataSource.data().length == 0) {
+            return true;
+        }
+       
+    };
+
